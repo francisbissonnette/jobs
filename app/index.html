@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Fermetures d'entreprises depuis le 7 avril</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+ 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css"/>
+     
+    <!-- endbuild -->
+      
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+    .leaflet-popup{
+        padding-bottom: 40px;
+        min-width: 200px
+      }
+      .leaflet-popup a{
+        color:#bd000a;
+        font-family: liberaux;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .leaflet-popup a:hover{
+        color:black
+       
+      }
+
+
+
+
+
+     
+    </style>
+  </head>
+
+  <body class="has-canvas">
+  <nav class="navbar navbar-default navbar-fixed-top">
+          
+            <div id="contenant_titre"><div id="titre">fermetures depuis le 7 avril 2014</div></div>
+            <a href="#panneau" data-toggle="drawer" id="btn-panneau"  aria-foldedopen="false" aria-controls="panneau" class=""><i class="fa fa-bars fa-3"></i></a>
+         
+          
+        
+        
+    </nav>
+   <div id="panneau" class="drawer dw-xs-10 dw-s m-6 dw-md-4 fold" aria-labelledby="panneau" >
+         <a href="#panneau" data-toggle="drawer" id="btn-panneau-close"  aria-foldedopen="false" aria-controls="panneau" class=""><i class="fa fa-times-circle fa-3"></i></a>
+        <div class="drawer-contents">
+           
+             
+            <ul class="drawer-nav">
+               
+                <li role="presentation"   id="laMalbaie"><a href="#"><h4>8 avril 2014</h4> <h1>General cable<br/> - 60 emplois</h1><h3>La Malbaie </h3> </a></li>
+                <li role="presentation"  id="metabetchouan"><a href="#"><h4>26 avril 2014</h4> <h1>Norfruit<br/ >- 42 emplois</h1><h3>Métabetchouan </h3> </a></li>
+                <li role="presentation"  id="Romeo"><a href="#"><h4>8 mai 2014</h4> <h1>Roméo Laflamme et fils<br/>- 70 emplois</h1><h3> Saint-Benoit-Labre </h3> </a></li>
+                <li role="presentation"  id="Energizer"><a href="#"><h4>fermeture progressive d'ici 2017</h4> <h1>Energizer Holdings - 430 emplois</h1><h3> Montréal </h3> </a></li>
+                <li role="presentation"  id="Cascades"><a href="#"><h4>3 octobre 2014</h4> <h1>Cascades - 175 emplois</h1><h3>East Angus </h3> </a></li>
+                <li role="presentation"  id="Electrolux"><a href="#"><h4>17 juillet 2014</h4> <h1>Electrolux,- 1300 emplois</h1><h3> L’Assomption </h3> </a></li>
+                <li role="presentation"  id="Bombardier"><a href="#"><h4>23 juillet 2014</h4> <h1>- 900 emplois</h1><h3>Bombardier aéronautique, Montréal </h3> </a></li>
+                <li role="presentation"  id="Tapis"><a href="#"><h4>7 novembre 2014</h4> <h1>- 40 emplois</h1><h3>Tapis Venture, Drummondville </h3> </a></li>
+                <li role="presentation"  id="Usine"><a href="#"><h4>15 octobre 2014</h4> <h1>- 275 emplois</h1><h3>Usine Laurentide de Resolu, Shawinigan </h3> </a></li>
+                <li role="presentation"  id="Saputo"><a href="#"><h4>FERMETURE PRÉVU LE Août 2015</h4> <h1>- 65 emplois</h1><h3>Saputo, Trois-Rivières </h3> </a></li>
+                <li role="presentation"  id="Kruger"><a href="#"><h4>14 novembre 2014</h4> <h1>- 100 emplois</h1><h3>Kruger, Brompton </h3> </a></li>
+                <li role="presentation"  id="Resolu"><a href="#"><h4>30 novembre 2014</h4> <h1>- 80 emplois</h1><h3>Résolu, Baie-Comeau </h3> </a></li>
+                <li role="presentation"  id="Industries"><a href="#"><h4>2 octobre 2014</h4> <h1>- 40 emplois</h1><h3>Industries Cover, Baie-St-Paul </h3> </a></li>
+                <li role="presentation"  id="Serres"><a href="#"><h4>7 novembre 2014</h4> <h1>- 45 emplois</h1><h3>Serres Lacoste, Les Éboulements </h3> </a></li>
+                <li role="presentation"  id="Jacob"><a href="#"><h4>21 octobre 2014</h4> <h1>- 1500 emplois</h1><h3>Jacob </h3> </a></li>
+                <li role="presentation"  id="Lithium"><a href="#"><h4>8 octobre 2014</h4> <h1>- 200 emplois</h1><h3>Québec Lithium, La Corne</h3> </a></li>
+                <li role="presentation"  id="SNCLavalin"><a href="#"><h4>6 novembre 2014</h4> <h1>- 1000 emplois</h1><h3>SNC-Lavalin</h3> </a></li>
+                <li role="presentation"  id="Metso"><a href="#"><h4>13 février 2015</h4> <h1>- 191 emplois</h1><h3>Metso, Lachine</h3> </a></li>
+                <li role="presentation"  id="Arvida"><a href="#"><h4>26 novembre 2014</h4> <h1>- 50 emplois</h1><h3>Atelier d'usinage d'Arvida</h3> </a></li>
+                <li role="presentation"  id="Cliff"><a href="#"><h4>25 novembre 2014</h4> <h1>- 500 emplois</h1><h3>Cliff Resources, Lac-Bloom</h3> </a></li>
+                <li role="presentation"  id="Resolu2"><a href="#"><h4>30 janvier 2015</h4> <h1>- 120 emplois</h1><h3>Résolu Clermont et Baie-Comeau</h3> </a></li>
+                <li role="presentation"  id="Fonderie"><a href="#"><h4>18 décembre 2014</h4> <h1>- 70 emplois</h1><h3>Fonderie Mueller, Saint-Jérôme</h3> </a></li>
+                <li role="presentation"  id="Avon"><a href="#"><h4>avril 2015</h4> <h1>- 600 emplois</h1><h3>Avon Canada, centre de distribution Pointe-Claire</h3> </a></li>
+                <li role="presentation"  id="Mexx"><a href="#"><h4>janvier 2015</h4> <h1>- 150 emplois</h1><h3>Mexx: fermeture de 30 boutiques</h3> </a></li>
+                <li role="presentation"  id="Target"><a href="#"><h4>janvier 2015</h4> <h1>- 3300 emplois</h1><h3>Target: fermeture de 25 boutiques</h3> </a></li>
+                <li role="presentation"  id="Parasuco"><a href="#"><h4>6 février 2015</h4> <h1>- 80 emplois</h1><h3>Parasuco: fermeture de 7 boutiques</h3> </a></li>
+                <li role="presentation"  id="Parmalat"><a href="#"><h4>FERMETURE PRÉVU LE 30 septembre 2015</h4> <h1>- 92 emplois</h1><h3>Parmalat, Marieville</h3> </a></li>
+
+
+                <br/><br/>
+
+                 
+
+            </ul>
+            <div class="drawer-footer">
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="container-full">
+        <div id='map'></div>
+        
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+-->
+    
+
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+         <script src="bower_components/bootstrap-drawer/dist/js/drawer.min.js"></script> 
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+   
+        <!-- endbuild -->
+</body>
+</html>
